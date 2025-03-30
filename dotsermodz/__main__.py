@@ -9,7 +9,7 @@ import asyncio
 
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - ☠➥%(message)s')
 
 async def main():
      await app.start() 
@@ -22,4 +22,4 @@ if __name__ == "__main__":
     print(strt_msgs)  
     
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(main())          
+    loop.run_until_complete(main())

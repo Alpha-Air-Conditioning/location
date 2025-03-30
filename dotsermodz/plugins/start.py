@@ -47,4 +47,3 @@ async def receive_location(client, message: Message):
     # Confirm with user
     await message.reply_text("✅ Location received! You can now proceed.", reply_markup=None)
 
-app.run()
