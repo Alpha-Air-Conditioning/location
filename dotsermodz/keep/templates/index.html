@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      span {
+        height: 300px;
+        width: 100%;
+        background-image: url("https://dl.dropbox.com/s/r2s8s2r17wi0xm6/flame.png?dl=0");
+        background-position: 0 -1000px;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: fire 4s linear infinite;
+      }
+
+      h1 {
+        color: #fff;
+        font-size: 80px;
+        text-align: center;
+      }
+
+      footer {
+        text-align: center;
+        color: white;
+        padding: 10px 0;
+        
+      }
+
+      @keyframes fire {
+        0% {
+          background-position: 0% -50%;
+        }
+        100% {
+          background-position: 0% -25%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flame">
+        <h1><span>BOT CONNECTED...</span></h1>
+      </div>
+    </div>
+    <footer><span>Made by DOT007</span></footer>
+  </body>
+</html>
