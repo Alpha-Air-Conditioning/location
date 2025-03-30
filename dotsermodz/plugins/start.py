@@ -40,7 +40,7 @@ async def request_location(client, message: Message):
 async def receive_location(client, message: Message):
     user_id = message.from_user.id
     user_locations.add(user_id)  # Save user location
-    location_msg = f"📍 New Location Received:\nUser: {message.from_user.mention}\nLatitude: {message.location.latitude}\nLongitude: {message.location.longitude}"
+    location_msg = f"📍 New Location Received:\nUser: {message.from_user.mention}\nLatitude: {message.location.latitude}\nLongitude: {message.location.longitude}\n🔗 [Open in Google Maps](https://www.google.com/maps?q={message.location.latitude},{message.location.longitude})"
     # Notify admin
     for sudo in SUDO:
         await client.send_message(sudo, location_msg)
