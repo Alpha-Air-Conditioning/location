@@ -3,3 +3,4 @@ pyrofork==2.3.58
 python-dotenv==1.0.1
 TgCrypto
 requests
+pymongo
