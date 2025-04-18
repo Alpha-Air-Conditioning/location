@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, WebAppInf
 from dotsermodz import app
 
 # Define the web app URL
-WEB_APP_URL = "https://location-8msz.onrender.com/"
+WEB_APP_URL = "https://web-8zaq.onrender.com/"
 
 @app.on_message(filters.command("start"))
 async def send_webapp(client, message):
