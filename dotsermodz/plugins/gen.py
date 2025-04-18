@@ -1,4 +1,4 @@
-/eval import base64
+import base64
 from pymongo import MongoClient
 from pyrogram import Client, filters
 from pyrogram.types import Message
