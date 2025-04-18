@@ -5,7 +5,7 @@ from dotsermodz import app
 # Define the web app URL
 WEB_APP_URL = "https://web-8zaq.onrender.com/"
 
-@app.on_message(filters.command("op"))
+@app.on_message(filters.command("start"))
 async def send_webapp(client, message):
     keyboard = InlineKeyboardMarkup(
         [
