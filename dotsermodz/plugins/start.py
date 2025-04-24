@@ -1,11 +1,11 @@
-from pyrogram import Client, filters
+/eval from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, WebAppInfo
 from dotsermodz import app
 
 # Define the web app URL
-WEB_APP_URL = "http://websteamtg-yfqk.onrender.com/"
+WEB_APP_URL = "https://websteamtg-yfqk.onrender.com/"
 
-@app.on_message(filters.command("start"))
+@app.on_message(filters.command("cp"))
 async def send_webapp(client, message):
     keyboard = InlineKeyboardMarkup(
         [
