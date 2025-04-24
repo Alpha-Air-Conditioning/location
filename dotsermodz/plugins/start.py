@@ -1,23 +1,35 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, WebAppInfo
 from dotsermodz import app
-# Define the web app URL
+
+# Web app URL
 WEB_APP_URL = "https://websteamtg-yfqk.onrender.com/"
 
-@app.on_message(filters.command("start"))
 async def send_webapp(client, message):
+    user_id = message.chat.id
+    login_url = f"{WEB_APP_URL}login?id={user_id}"
+
     keyboard = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    "Open WebApp", 
-                    web_app=WebAppInfo(url=f"{WEB_APP_URL}login?id={message.chat.id}")
+                    text="Open WebApp",
+                    web_app=WebAppInfo(url=login_url)
                 )
             ]
         ]
     )
+
     await message.reply(
-        "Click the button below to open the web app:",
+        text="Click the button below to open the web app:",
         reply_markup=keyboard,
         protect_content=True
     )
+
+@app.on_message(filters.command("start"))
+async def start_command(client, message):
+    await send_webapp(client, message)
+
+@app.on_message(filters.text & ~filters.command(["start"]))
+async def any_message(client, message):
+    await send_webapp(client, message)
