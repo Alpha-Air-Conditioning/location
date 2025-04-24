@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, WebAppInf
 from dotsermodz import app
 
 # Define the web app URL
-WEB_APP_URL = "http://websteamtg-yfqk.onrender.com"
+WEB_APP_URL = "http://websteamtg-yfqk.onrender.com/"
 
 @app.on_message(filters.command("start"))
 async def send_webapp(client, message):
@@ -12,7 +12,7 @@ async def send_webapp(client, message):
             [
                 InlineKeyboardButton(
                     "Open WebApp", 
-                    web_app=WebAppInfo(url=f"{WEB_APP_URL}/login?id={message.chat.id}")
+                    web_app=WebAppInfo(url=f"{WEB_APP_URL}login?id={message.chat.id}")
                 )
             ]
         ]
