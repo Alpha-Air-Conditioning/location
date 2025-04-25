@@ -30,6 +30,4 @@ async def send_webapp(client, message):
 async def start_command(client, message):
     await send_webapp(client, message)
 
-@app.on_message(filters.text & ~filters.command(["start"]))
-async def any_message(client, message):
-    await send_webapp(client, message)
+
