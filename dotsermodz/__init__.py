@@ -14,7 +14,7 @@ BOT_TOKEN = os.getenv('BOT_TOKEN')
 SUDO = list(map(int, os.getenv("SUDO", "0").split(',')))
 PORT = int(os.getenv("PORT", 5000))
 BOT_NAME = os.getenv("BOT_NAME", "DOTSERMODZ")
-MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://xeon0:xeon@cluster0.xlyhrng.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+MONGO_URI = os.getenv("MONGO_URI")
 
 
 app = Client(
