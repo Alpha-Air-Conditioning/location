@@ -4,18 +4,9 @@ import datetime
 from pymongo import MongoClient
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from dotenv import load_dotenv
 
 # Your existing app instance and sudo list
-from dotsermodz import app, SUDO
-
-# Load environment variables
-load_dotenv()
-
-# MongoDB Setup
-MONGO_URI = os.getenv("MONGO_URI","mongodb+srv://xeon0:xeon@cluster0.xlyhrng.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-if not MONGO_URI:
-    raise ValueError("MONGO_URI not set in .env")
+from dotsermodz import app, SUDO , MONGO_URI
 
 DB_NAME = "peer_database"
 COLLECTION_NAME = "peers"
